@@ -30,8 +30,7 @@ npm run dev
 
 ## Pages
 
-- `/` Home (hero + intro strip + contact section)
-- `/about` About
+- `/` Home (hero + contact section)
 - `/work` Work experience
 
 ## Contact form

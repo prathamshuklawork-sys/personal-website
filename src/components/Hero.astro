@@ -1,53 +1,62 @@
 ---
-type Props = {
-  headline: string;
-  subhead: string;
-};
-
-const { headline, subhead } = Astro.props;
 const base = import.meta.env.BASE_URL ?? "/";
+const photoSrc = `${base}pratham.png`;
 ---
 
 <section class="min-h-[calc(100vh-4rem)] flex items-center">
-  <div class="mx-auto w-full max-w-6xl px-5 py-16">
-    <div class="grid gap-10 md:grid-cols-12 md:items-end">
-      <div class="md:col-span-8">
-        <p class="text-sm font-medium tracking-wide text-ink/60">[PLACEHOLDER — short descriptor]</p>
-        <h1 class="mt-5 font-display text-5xl leading-[0.95] tracking-tightish text-ink sm:text-6xl lg:text-7xl">
-          {headline}
+  <div class="mx-auto w-full max-w-6xl px-5 py-14 md:px-[60px] md:py-[90px]">
+    <div class="flex flex-col gap-10 md:flex-row md:items-center md:justify-between md:gap-[60px]">
+      <div class="max-w-[620px]">
+        <h1
+          class="mb-7 font-display text-[clamp(36px,4.5vw,52px)] font-light leading-[1.15] tracking-[-0.02em] text-[#1a1a18]"
+        >
+          Hi, I am Pratham.
         </h1>
-        <p class="mt-6 max-w-2xl text-lg leading-relaxed text-ink/75 sm:text-xl">
-          {subhead}
+        <p class="text-[16px] font-light leading-[1.75] text-[#6b6a65]">
+          I have been a product manager for the past 3.5 years, and I'm currently on a career break. I'm using this
+          time to reflect on what I want from work (and life), while building habits, hobbies, and skills that I can
+          take with me wherever I go.
+        </p>
+        <p class="mt-5 text-[16px] font-light leading-[1.75] text-[#6b6a65]">
+          I am a bathroom singer, a (wannabe) runner, and an avid LGBTQ+/women/minority rights supporter. I'm always
+          up for meeting new people and learning their stories, so drop me a "Hi!" if you would like a chat.
         </p>
 
-        <div class="mt-10 flex flex-wrap items-center gap-3">
+        <div class="mt-10 flex flex-wrap items-center gap-3.5">
           <a
             href={`${base}work/`}
-            class="inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-soft hover:translate-y-[-1px] hover:shadow-[0_18px_52px_rgba(11,27,58,0.18)] transition"
+            class="inline-flex items-center justify-center rounded-[100px] bg-[#1a1a18] px-[28px] py-[13px] text-[14px] font-medium text-[#f6f4ef] transition hover:translate-y-[-1px] hover:shadow-[0_14px_34px_rgba(0,0,0,0.14)]"
           >
             See My Work
           </a>
           <a
             href={`${base}#contact`}
-            class="inline-flex items-center justify-center rounded-full border border-ink/15 bg-white/70 px-6 py-3 text-sm font-semibold text-ink hover:border-ink/25 hover:bg-white transition"
+            class="inline-flex items-center justify-center rounded-[100px] border-[1.5px] border-[#1a1a18] bg-transparent px-[28px] py-[13px] text-[14px] font-medium text-[#1a1a18] transition hover:bg-[#1a1a18] hover:text-[#f6f4ef]"
           >
             Get In Touch
+          </a>
+          <a
+            href="https://www.linkedin.com/in/pratham-shukla/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Visit Pratham Shukla on LinkedIn"
+            class="inline-flex items-center justify-center gap-2 rounded-[100px] border-[1.5px] border-[#1a1a18] bg-transparent px-[20px] py-[13px] text-[14px] font-medium text-[#1a1a18] transition hover:bg-[#1a1a18] hover:text-[#f6f4ef]"
+          >
+            <svg viewBox="0 0 24 24" class="h-4 w-4" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452H16.89v-5.569c0-1.328-.026-3.037-1.85-3.037-1.852 0-2.136 1.445-2.136 2.94v5.666H9.35V9h3.414v1.561h.049c.476-.9 1.637-1.85 3.369-1.85 3.602 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.063 2.063 0 1 1 0-4.126 2.063 2.063 0 0 1 0 4.126zM7.119 20.452H3.555V9h3.564v11.452z" />
+            </svg>
+            <span>LinkedIn</span>
           </a>
         </div>
       </div>
 
-      <div class="md:col-span-4 md:justify-self-end">
-        <!-- [PLACEHOLDER — optional abstract visual / initials block] -->
-        <div class="relative overflow-hidden rounded-3xl border border-ink/10 bg-white/60 p-6 shadow-soft">
-          <div class="text-xs font-semibold tracking-wide text-ink/50">[PLACEHOLDER]</div>
-          <div class="mt-6 flex items-end justify-between">
-            <div>
-              <div class="font-display text-4xl tracking-tightish">PS</div>
-              <div class="mt-2 text-sm text-ink/60">[PLACEHOLDER — location]</div>
-            </div>
-            <div class="h-16 w-16 rounded-2xl bg-accent/10 ring-1 ring-accent/20"></div>
-          </div>
-          <div class="pointer-events-none absolute -right-10 -top-10 h-40 w-40 rounded-full bg-accent/10 blur-2xl"></div>
+      <div class="flex w-full justify-start md:w-auto md:justify-end">
+        <div class="h-[400px] w-[320px] overflow-hidden rounded-[4px_80px_4px_4px] bg-[#ebe9e3] shadow-[0_20px_60px_rgba(0,0,0,0.10)]">
+          <img
+            src={photoSrc}
+            alt="[PLACEHOLDER — short alt text about you]"
+            class="h-full w-full object-cover object-[center_top]"
+          />
         </div>
       </div>
     </div>

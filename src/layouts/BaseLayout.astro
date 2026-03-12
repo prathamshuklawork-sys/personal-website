@@ -1,6 +1,5 @@
 ---
 import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 
 type Props = {
@@ -35,7 +34,7 @@ const resolvedOgDescription = ogDescription ?? description;
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,700&family=Fraunces:opsz,wght,SOFT,WONK@9..144,600,60,1;9..144,700,60,1&display=swap"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Fraunces:ital,opsz,wght@1,9..144,300&display=swap"
       rel="stylesheet"
     />
 
@@ -53,8 +52,6 @@ const resolvedOgDescription = ogDescription ?? description;
     <main id="main" class="min-h-[70vh]">
       <slot />
     </main>
-
-    <Footer />
 
     <script>
       // Minimal scroll-reveal with IntersectionObserver (no library)

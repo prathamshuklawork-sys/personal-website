@@ -7,17 +7,20 @@ const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL ?? "[PLACEHOLDER — y
     <div class="grid gap-10 md:grid-cols-12 md:items-start">
       <div class="md:col-span-5 reveal">
         <h2 class="font-display text-4xl tracking-tightish sm:text-5xl">Let's Connect</h2>
-        <p class="mt-4 max-w-md text-base leading-relaxed text-ink/70">
-          [PLACEHOLDER — e.g. "I'm currently open to conversations about product, strategy, and social impact. Drop your
-          email and I'll reach out."]
+        <p class="text-[18px] leading-[1.7] text-[#6b6a65] max-w-[320px] mt-4">
+          Open to any and every discussion on product, strategy and social impact. No agenda needed — just say hi.
         </p>
-        <div class="mt-8 rounded-2xl border border-ink/10 bg-paper p-5">
-          <div class="text-sm font-semibold text-ink">What happens next</div>
-          <ul class="mt-3 space-y-2 text-sm text-ink/70">
-            <li>[PLACEHOLDER — You’ll get a reply within X days]</li>
-            <li>[PLACEHOLDER — Best topics to reach out about]</li>
-            <li>[PLACEHOLDER — Optional: add calendly link later]</li>
-          </ul>
+        <div class="mt-10">
+          <p class="mb-3.5 text-[11px] uppercase tracking-[0.1em] text-[#9b9a95]">
+            I enjoy talking about
+          </p>
+          <div class="flex flex-wrap gap-2.5">
+            <span class="rounded-full border-[1.5px] border-[#dedad3] px-4 py-2 text-[14px] font-normal text-[#1a1a18] bg-[#F5F3EF]">Career breaks & transitions</span>
+            <span class="rounded-full border-[1.5px] border-[#dedad3] px-4 py-2 text-[14px] font-normal text-[#1a1a18] bg-[#F5F3EF]">Product & strategy</span>
+            <span class="rounded-full border-[1.5px] border-[#dedad3] px-4 py-2 text-[14px] font-normal text-[#1a1a18] bg-[#F5F3EF]">Social impact</span>
+            <span class="rounded-full border-[1.5px] border-[#dedad3] px-4 py-2 text-[14px] font-normal text-[#1a1a18] bg-[#F5F3EF]">Ikigai & flow</span>
+            <span class="rounded-full border-[1.5px] border-[#dedad3] px-4 py-2 text-[14px] font-normal text-[#1a1a18] bg-[#F5F3EF]">Life in general</span>
+          </div>
         </div>
       </div>
 
@@ -33,7 +36,7 @@ const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL ?? "[PLACEHOLDER — y
                 type="text"
                 required
                 class="h-12 w-full rounded-2xl border border-ink/15 bg-white px-4 text-sm text-ink outline-none ring-0 placeholder:text-ink/40 focus:border-accent/40 focus:ring-2 focus:ring-accent/15"
-                placeholder="[PLACEHOLDER — your name]"
+                placeholder="your name"
               />
               <p class="hidden text-sm text-red-700" data-error="name">[PLACEHOLDER]</p>
             </div>
@@ -46,7 +49,7 @@ const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL ?? "[PLACEHOLDER — y
                 type="email"
                 required
                 class="h-12 w-full rounded-2xl border border-ink/15 bg-white px-4 text-sm text-ink outline-none ring-0 placeholder:text-ink/40 focus:border-accent/40 focus:ring-2 focus:ring-accent/15"
-                placeholder="[PLACEHOLDER — you@example.com]"
+                placeholder="you@example.com"
               />
               <p class="hidden text-sm text-red-700" data-error="email">[PLACEHOLDER]</p>
             </div>
@@ -58,29 +61,22 @@ const contactEmail = import.meta.env.PUBLIC_CONTACT_EMAIL ?? "[PLACEHOLDER — y
                 name="message"
                 rows="4"
                 class="w-full resize-none rounded-2xl border border-ink/15 bg-white px-4 py-3 text-sm text-ink outline-none ring-0 placeholder:text-ink/40 focus:border-accent/40 focus:ring-2 focus:ring-accent/15"
-                placeholder="[PLACEHOLDER — a short note]"
+                placeholder="a short note"
               ></textarea>
             </div>
 
-            <div class="flex flex-wrap items-center justify-between gap-3 pt-1">
+            <div class="flex flex-wrap items-center gap-3 pt-1">
               <p class="hidden text-sm text-red-700" data-form-error>Something went wrong. Please try again.</p>
               <p class="hidden text-sm text-ink/70" data-form-success>Thanks! I'll be in touch soon.</p>
               <button
                 type="submit"
-                class="ml-auto inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-soft hover:translate-y-[-1px] hover:shadow-[0_18px_52px_rgba(11,27,58,0.18)] transition disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-soft"
+                class="self-start inline-flex items-center justify-center rounded-full bg-accent px-6 py-3 text-sm font-semibold text-white shadow-soft hover:translate-y-[-1px] hover:shadow-[0_18px_52px_rgba(11,27,58,0.18)] transition disabled:opacity-60 disabled:hover:translate-y-0 disabled:hover:shadow-soft"
                 data-submit
               >
                 Send
               </button>
             </div>
           </form>
-
-          <div class="mt-6 border-t border-ink/10 pt-5 text-xs text-ink/55">
-            [PLACEHOLDER — privacy note. e.g. "No spam. Only thoughtful replies."]<br />
-            <span class="text-ink/50"
-              >Static hosting note: this form opens your email client. Set `PUBLIC_CONTACT_EMAIL` for the destination.</span
-            >
-          </div>
         </div>
       </div>
     </div>
